@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="h-screen w-full bg-black flex items-center justify-center text-white">
+        <div class="bg-slate-800 p-10 w-96 rounded-lg">
+            <form method="POST" action="/chats">
+                <input type="text" name="from" placeholder="From" class="p-2 text-gray-700 rounded-md mb-4 w-full bg-white">
+                <input type="text" name="to" placeholder="To" class="p-2 text-gray-700 bg-white rounded-md mb-4 w-full">
+                <textarea name="message" placeholder="Message" class="p-2  text-gray-700 bg-white rounded-md mb-4 w-full"></textarea>
+                <button  type="submit" class="bg-red-900 cursor-pointer p-4 rounded-md w-full">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
