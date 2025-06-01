@@ -32,7 +32,11 @@
                         <form action="/chats/edit/<%= content._id %>" method="GET">
                             <button class="bg-red-900 text-center mt-4 text-white p-2 rounded-md">Edit Message</button>
                         </form>
+                        <form action="/chats/delete/<%= content._id %>" method="POST">
+                            <button class="bg-red-900 text-center mt-2 text-white p-2 rounded-md">Delete Message</button>
+                        </form>
                     </div>
+                
                 </div>
             <% }); %>
         </div>

@@ -20,7 +20,7 @@ async function main() {
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-let port = 3000;
+let port = 8080;
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 })
@@ -78,4 +78,14 @@ app.post('/chats/edit/:id',(req,res)=>{
 })
 
 
+
+app.post('/chats/delete/:id',(req,res)=>{
+    Chat.findByIdAndDelete(req.params.id).then(()=>{
+        console.log("Chat deleted successfully");
+        res.redirect('/chats');
+    }).catch(err => {
+        console.log("Error deleting chat:", err);
+        res.redirect('/chats');
+    });
+})
 
